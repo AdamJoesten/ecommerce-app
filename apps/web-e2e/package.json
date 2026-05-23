@@ -1,0 +1,16 @@
+{
+  "name": "@ecommerce/web-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "@ecommerce/eslint-config": "workspace:*"
+  },
+  "nx": {
+    "implicitDependencies": [
+      "@ecommerce/web"
+    ]
+  },
+  "scripts": {
+    "lint": "eslint"
+  }
+}
