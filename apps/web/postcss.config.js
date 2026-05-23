@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const { join } = require('path');
 
 // Note: If you use library-specific PostCSS/Tailwind configuration then you should remove the `postcssConfig` build
