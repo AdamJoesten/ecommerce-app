@@ -3,8 +3,8 @@ import { defineConfig } from "eslint/config";
 import { baseConfig } from '@ecommerce/eslint-config'
 
 export default defineConfig([
+    ...baseConfig,
     {
-        files: ["**/*.js"],
-        extends: [baseConfig],
+        files: ["**/*.ts"],
     },
 ]);
