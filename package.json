@@ -28,6 +28,8 @@
     "@types/react-dom": "^19.0.0",
     "autoprefixer": "10.4.13",
     "eslint": "^10.4.0",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
     "nx": "22.7.2",
     "postcss": "8.4.38",
     "prettier": "^3.8.1",
