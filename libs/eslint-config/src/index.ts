@@ -1,1 +1,1 @@
-export * from './lib/eslint.config.js';
+export * from './lib/eslint.config.ts';

@@ -1,12 +1,8 @@
 // eslint.config.js
-import { defineConfig } from "eslint/config";
+import prettier from 'eslint-config-prettier/flat';
+import tseslint from 'typescript-eslint'
 
-export const baseConfig = defineConfig([
-	{
-		rules: {
-			semi: "error",
-			"prefer-const": "error",
-		},
-		extends: ["@typescript-eslint/recommended"]
-	},
-]);
+export const baseConfig = [
+	...tseslint.configs.recommended,
+	prettier
+];
