@@ -14,6 +14,9 @@
     },
     {
       "path": "./libs/prettier-config"
+    },
+    {
+      "path": "./libs/ui"
     }
   ]
 }

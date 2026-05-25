@@ -43,5 +43,16 @@
     "src/**/*.spec.ts",
     "src/**/*.test.ts",
     ".next"
+  ],
+  "references": [
+    {
+      "path": "../../libs/ui"
+    },
+    {
+      "path": "../../libs/prettier-config"
+    },
+    {
+      "path": "../../libs/eslint-config"
+    }
   ]
 }

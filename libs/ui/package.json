@@ -1,0 +1,19 @@
+{
+  "name": "@ecommerce/ui",
+  "version": "0.0.1",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./styles/globals.css": {
+      "types": "./src/styles/globals.css.d.ts",
+      "default": "./src/styles/globals.css"
+    },
+    "./tailwind.config": "./tailwind.config.js",
+    "./package.json": "./package.json"
+  }
+}
