@@ -1,12 +1,12 @@
 services:
   postgres:
     image: postgres:17-alpine
+    env_file: apps/api/.env
     environment:
       POSTGRES_USER: ecommerce
-      POSTGRES_PASSWORD: password
       POSTGRES_DB: ecommerce
     ports:
-      - '5432:5432'
+      - '127.0.0.1:5432:5432'
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
@@ -21,8 +21,7 @@ services:
       dockerfile: apps/api/Dockerfile
     ports:
       - '8000:8000'
-    environment:
-      DATABASE_URL: postgresql://ecommerce:password@postgres:5432/ecommerce
+    env_file: apps/api/.env
     depends_on:
       postgres:
         condition: service_healthy

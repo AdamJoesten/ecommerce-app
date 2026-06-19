@@ -55,3 +55,7 @@ test-output
 
 
 storybook-static
+
+# local env files
+.env
+.env.local
