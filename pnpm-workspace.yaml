@@ -3,4 +3,5 @@ packages:
   - 'apps/*'
   - 'libs/*'
 allowBuilds:
+  '@scarf/scarf': true
   esbuild: true
