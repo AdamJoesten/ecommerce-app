@@ -2,11 +2,7 @@
   "name": "@ecommerce/web",
   "version": "0.0.1",
   "private": true,
-  "dependencies": {
-    "next": "~16.1.6",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@ecommerce/eslint-config": "workspace:*",
     "@ecommerce/prettier-config": "workspace:*",
