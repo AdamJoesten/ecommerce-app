@@ -1,8 +1,8 @@
 import request from "supertest";
 import { StatusCodes } from "http-status-codes";
 import { User } from "@ecommerce/contracts";
-import { UserRepository } from "./UserRepository";
-import { app } from "../../../server";
+import { UserRepository } from "../UserRepository";
+import { app } from "../../../../server";
 
 const mockUsers: User[] = [
     {

@@ -1,8 +1,8 @@
 import { container } from "tsyringe";
-import { UserService } from "./UserService";
-import { UserRepository } from "./UserRepository";
+import { UserService } from "../UserService";
+import { UserRepository } from "../UserRepository";
 import { User } from "@ecommerce/contracts";
-import { NotFoundError } from "../../../common/errors";
+import { NotFoundError } from "../../../../common/errors";
 
 const mockUser: User = {
     id: 1,

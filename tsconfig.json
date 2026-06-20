@@ -26,6 +26,9 @@
     },
     {
       "path": "./libs/contracts"
+    },
+    {
+      "path": "./libs/logging"
     }
   ]
 }

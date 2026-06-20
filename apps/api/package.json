@@ -61,7 +61,8 @@
     }
   },
   "dependencies": {
-    "@ecommerce/contracts": "workspace:*"
+    "@ecommerce/contracts": "workspace:*",
+    "@ecommerce/logging": "workspace:*"
   },
   "devDependencies": {
     "@ecommerce/eslint-config": "workspace:*",

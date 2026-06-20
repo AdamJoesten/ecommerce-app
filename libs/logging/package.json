@@ -1,0 +1,40 @@
+{
+  "name": "@ecommerce/logging",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "nx": {
+    "name": "logging",
+    "sourceRoot": "libs/logging/src",
+    "targets": {
+      "build": {
+        "executor": "@nx/js:swc",
+        "outputs": [
+          "{options.outputPath}"
+        ],
+        "options": {
+          "outputPath": "libs/logging/dist",
+          "main": "libs/logging/src/index.ts",
+          "tsConfig": "libs/logging/tsconfig.lib.json",
+          "skipTypeCheck": true,
+          "stripLeadingPaths": true
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "@swc/helpers": "~0.5.18",
+    "pino": "^10.3.1"
+  }
+}

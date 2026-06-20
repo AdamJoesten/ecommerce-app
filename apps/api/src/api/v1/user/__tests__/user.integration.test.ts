@@ -1,6 +1,6 @@
 import request from "supertest";
 import { StatusCodes } from "http-status-codes";
-import { app } from "../../../server";
+import { app } from "../../../../server";
 
 const hasDatabase = !!process.env.DATABASE_URL;
 
