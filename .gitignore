@@ -50,6 +50,10 @@ Thumbs.db
 .nx/migrate-runs
 
 # Next.js
-.next
-out
-test-output
+apps/web/.next
+apps/web/out
+apps/web/test-output
+
+# env
+.env*
+!.env.template
