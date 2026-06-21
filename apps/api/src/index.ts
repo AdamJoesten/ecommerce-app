@@ -1,21 +1,53 @@
-/**
- * This is not a production server yet!
- * This is only a minimal backend to get started.
- */
+import "reflect-metadata";
+import { env } from "./env";
+import { app } from "./api/server";
+import { db, pool } from "./db";
 
-import express from 'express';
-import * as path from 'path';
 
-const app = express();
 
-app.use('/assets', express.static(path.join(__dirname, 'assets')));
+const main = async () => {
 
-app.get('/api', (req, res) => {
-  res.send({ message: 'Welcome to api!' });
-});
+  const server = app.listen(env.apiPort, () => {
+    console.log(`Listening at http://localhost:${env.apiPort}/`);
+  });
 
-const port = process.env.PORT || 3333;
-const server = app.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}/api`);
-});
-server.on('error', console.error);
+  // Server
+  server.on("error", console.error);
+
+
+  // Process
+  const closePool = async () => {
+    console.info("Closing db client connection");
+    await pool.end()
+  }
+
+  const handleShutdown = () => {
+    server.close(async () => {
+      await closePool();
+      console.info("Shutting down...");
+      process.exit(0)
+    })
+
+    setTimeout(() => process.exit(1), 10_000).unref()
+  }
+
+  const handleFatal = (error: unknown) => {
+    console.error(error);
+
+    closePool().then(() => {
+      console.info("Shutting down...");
+      process.exit(1);
+    })
+  }
+
+  process.on("SIGINT", handleShutdown)
+  process.on("SIGTERM", handleShutdown)
+  process.on("uncaughtException", handleFatal)
+  process.on("unhandledRejection", handleFatal)
+
+}
+
+main().catch(() => {
+  console.error("Error initializing server...");
+  process.exit(1);
+})
