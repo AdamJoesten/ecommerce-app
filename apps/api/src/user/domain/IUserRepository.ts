@@ -1,5 +1,6 @@
-import { CreateUserResponseDto } from "../application/out/createUserResponseDto";
+import { User } from "./User";
 
 export interface IUserRepository {
-    getUser: () => Promise<CreateUserResponseDto>
+    createUser: (user: User) => Promise<User>
+    getUser: () => Promise<User | null>
 }
