@@ -255,10 +255,10 @@ importers:
       '@ecommerce/logging':
         specifier: workspace:*
         version: link:../../libs/logging
+      tsyringe:
+        specifier: ^4.10.0
+        version: 4.10.0
     devDependencies:
-      '@ecommerce/eslint-config':
-        specifier: workspace:*
-        version: link:../../libs/eslint-config
       '@ecommerce/prettier-config':
         specifier: workspace:*
         version: link:../../libs/prettier-config
@@ -267,9 +267,6 @@ importers:
 
   apps/web:
     devDependencies:
-      '@ecommerce/eslint-config':
-        specifier: workspace:*
-        version: link:../../libs/eslint-config
       '@ecommerce/prettier-config':
         specifier: workspace:*
         version: link:../../libs/prettier-config
@@ -279,9 +276,6 @@ importers:
 
   apps/web-e2e:
     devDependencies:
-      '@ecommerce/eslint-config':
-        specifier: workspace:*
-        version: link:../../libs/eslint-config
       '@ecommerce/prettier-config':
         specifier: workspace:*
         version: link:../../libs/prettier-config

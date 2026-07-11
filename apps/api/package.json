@@ -62,10 +62,10 @@
   },
   "dependencies": {
     "@ecommerce/contracts": "workspace:*",
-    "@ecommerce/logging": "workspace:*"
+    "@ecommerce/logging": "workspace:*",
+    "tsyringe":"^4.10.0"
   },
   "devDependencies": {
-    "@ecommerce/eslint-config": "workspace:*",
     "@ecommerce/prettier-config": "workspace:*"
   },
   "scripts": {
