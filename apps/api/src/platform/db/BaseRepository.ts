@@ -1,6 +1,6 @@
 import { DatabaseError } from 'pg';
-import { type DrizzleClient } from '../db';
-import { BadRequestError, ConflictError } from './errors';
+import { type DrizzleClient } from '.';
+import { BadRequestError, ConflictError } from '../infrastructure/http/errors';
 
 export abstract class BaseRepository {
     protected readonly _db: DrizzleClient;

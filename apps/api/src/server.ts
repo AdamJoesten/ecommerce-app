@@ -2,7 +2,7 @@ import express, { type Express, type NextFunction, type Request, type Response }
 import { StatusCodes } from 'http-status-codes';
 import { ApiResponse } from '@ecommerce/contracts';
 import { v1Router } from './api/v1/v1Router';
-import { ApplicationError, ValidationError } from './common/errors';
+import { ApplicationError, ValidationError } from './platform/infrastructure/http/errors';
 
 const app: Express = express();
 

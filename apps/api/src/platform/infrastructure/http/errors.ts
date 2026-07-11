@@ -11,19 +11,19 @@ export class ApplicationError extends Error {
 }
 
 export class BadRequestError extends ApplicationError {
-    constructor(message: string = 'Bad request') {
+    constructor(message = 'Bad request') {
         super(message, StatusCodes.BAD_REQUEST);
     }
 }
 
 export class NotFoundError extends ApplicationError {
-    constructor(message: string = 'Not found') {
+    constructor(message = 'Not found') {
         super(message, StatusCodes.NOT_FOUND);
     }
 }
 
 export class ConflictError extends ApplicationError {
-    constructor(message: string = 'Conflict') {
+    constructor(message = 'Conflict') {
         super(message, StatusCodes.CONFLICT);
     }
 }

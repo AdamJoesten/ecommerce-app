@@ -1,11 +1,11 @@
 import type { NextFunction, Request, Response } from 'express';
-import type { ZodSchema } from 'zod';
+import { type ZodType } from 'zod';
 import { ZodError } from 'zod';
-import { ValidationError } from './errors';
+import { ValidationError } from '../errors';
 
-export const validateRequest = (schema: ZodSchema) => async (req: Request, _res: Response, next: NextFunction) => {
+export const validateRequest = (schema: ZodType) => async (req: Request, _res: Response, next: NextFunction) => {
     try {
-        await schema.parseAsync({ body: req.body, query: req.query, params: req.params });
+        await schema.parse({ body: req.body, query: req.query, params: req.params });
         next();
     } catch (err) {
         if (err instanceof ZodError) {
