@@ -8,7 +8,6 @@
     ]
   },
   "devDependencies": {
-    "@ecommerce/eslint-config": "workspace:*",
     "@ecommerce/prettier-config": "workspace:*"
   },
   "scripts": {

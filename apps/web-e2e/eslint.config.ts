@@ -1,10 +1,9 @@
 // eslint.config.js
-import { defineConfig } from "eslint/config";
-import { baseConfig } from '@ecommerce/eslint-config'
+import baseConfig from '../../eslint.config.mjs'
 
-export default defineConfig([
+export default [
     ...baseConfig,
     {
         files: ["**/*.ts"],
     },
-]);
+];

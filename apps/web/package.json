@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "@ecommerce/eslint-config": "workspace:*",
     "@ecommerce/prettier-config": "workspace:*",
     "@ecommerce/ui": "workspace:*"
   },

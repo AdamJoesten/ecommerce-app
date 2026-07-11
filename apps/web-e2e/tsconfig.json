@@ -15,13 +15,10 @@
     "src/**/*.test.js",
     "src/**/*.d.ts"
   ],
-  "exclude": ["out-tsc", "test-output"],
+  "exclude": ["out-tsc", "test-output", "eslint.config.ts"],
   "references": [
     {
       "path": "../../libs/prettier-config"
     },
-    {
-      "path": "../../libs/eslint-config"
-    }
   ]
 }
