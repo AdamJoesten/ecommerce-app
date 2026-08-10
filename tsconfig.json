@@ -10,9 +10,6 @@
       "path": "./apps/web"
     },
     {
-      "path": "./libs/eslint-config"
-    },
-    {
       "path": "./libs/prettier-config"
     },
     {

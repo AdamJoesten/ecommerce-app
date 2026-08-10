@@ -1,23 +1,16 @@
-import express, { type Express, type NextFunction, type Request, type Response } from 'express';
-import { StatusCodes } from 'http-status-codes';
-import { ApiResponse } from '@ecommerce/contracts';
-import { v1Router } from './api/v1/v1Router';
-import { ApplicationError, ValidationError } from './platform/infrastructure/http/errors';
+import express, { type Express } from "express";
+import { v1Router as ecommerceV1Router } from "./api/v1/v1Router";
+import { errorHandler } from "./platform/infrastructure/http/middleware/errorHandler";
+import helmet from "helmet";
+import requestLogger from "./platform/requestLogger";
 
 const app: Express = express();
 
-app.use('/api/v1', v1Router);
+app.use(express.json());
+app.use(helmet());
+app.use(requestLogger);
 
-app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
-    if (err instanceof ValidationError) {
-        res.status(err.statusCode).json(ApiResponse.failure(err.message, err.fieldErrors, err.statusCode));
-    } else if (err instanceof ApplicationError) {
-        res.status(err.statusCode).json(ApiResponse.failure(err.message, null, err.statusCode));
-    } else {
-        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(
-            ApiResponse.failure('Internal server error', null, StatusCodes.INTERNAL_SERVER_ERROR)
-        );
-    }
-});
+app.use("/ecommerce/api", ecommerceV1Router);
+app.use(...errorHandler());
 
 export { app };

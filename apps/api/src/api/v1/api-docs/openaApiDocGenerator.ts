@@ -1,5 +1,5 @@
 import { OpenAPIRegistry, OpenApiGeneratorV3 } from "@asteasolutions/zod-to-openapi";
-import { healthRegistry } from "../../../platform/infrastructure/http/routes/healthRouter";
+import { healthRegistry } from "../../platform/infrastructure/http/routes/healthRouter";
 
 
 

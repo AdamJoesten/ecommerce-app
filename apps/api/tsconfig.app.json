@@ -21,13 +21,13 @@
   ],
   "references": [
     {
-      "path": "../../libs/prettier-config/tsconfig.lib.json"
-    },
-    {
-      "path": "../../libs/eslint-config/tsconfig.lib.json"
+      "path": "../../libs/logging/tsconfig.lib.json"
     },
     {
       "path": "../../libs/contracts/tsconfig.lib.json"
+    },
+    {
+      "path": "../../libs/prettier-config/tsconfig.lib.json"
     }
   ]
 }

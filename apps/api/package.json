@@ -63,7 +63,9 @@
   "dependencies": {
     "@ecommerce/contracts": "workspace:*",
     "@ecommerce/logging": "workspace:*",
-    "tsyringe":"^4.10.0"
+    "tsyringe": "^4.10.0",
+    "helmet": "^8.3.0",
+    "dotenv": "^17.4.2"
   },
   "devDependencies": {
     "@ecommerce/prettier-config": "workspace:*"
